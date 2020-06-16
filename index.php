@@ -99,14 +99,10 @@
                     <img src="images/user.jpg" width="48" height="48" alt="User" />
                 </div>
                 <div class="info-container">
-                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">UET ChatBot</div>
+                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hồng Quang ChatBot</div>
                     <div class="btn-group user-helper-dropdown">
                         <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
-                        <ul class="dropdown-menu pull-right">
-                            <li><a href="https://www.facebook.com/UETVNUChatBot"><i class="material-icons">person</i>Fanpage</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="https://m.me/UETVNUChatBot"><i class="material-icons">message</i>Inbox</a></li>
-                        </ul>
+                        
                     </div>
                 </div>
             </div>
