@@ -29,7 +29,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Welcome To UET ChatBot</title>
+    <title>Hồng Quang ChatBot</title>
     <!-- Favicon-->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
@@ -84,7 +84,7 @@
             <div class="navbar-header">
                 <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="index.html">UET CHATBOT</a>
+                <a class="navbar-brand" href="index.html">Hồng Quang Chatbot</a>
             </div>
             
         </div>
@@ -125,17 +125,7 @@
                 </ul>
             </div>
             <!-- #Menu -->
-            <!-- Footer -->
-            <div class="legal">
-                <div class="copyright">
-                    &copy; 2018 - 20xx <a href="https://www.facebook.com/UETVNUChatBot">UET CHATBOT</a>.
-                </div>
-                <div class="version">
-                    <b>Version: </b> 1.0.0
-                </div>
-            </div>
-            <!-- #Footer -->
-        </aside>
+         </aside>
         <!-- #END# Left Sidebar -->
     </section>
 
@@ -259,17 +249,7 @@
                 </div>
                 <!-- #END# Browser Usage -->
             </div>
-			<div class="row clearfix">
-				<div id="fb-root"></div>
-				<script>(function(d, s, id) {
-				  var js, fjs = d.getElementsByTagName(s)[0];
-				  if (d.getElementById(id)) return;
-				  js = d.createElement(s); js.id = id;
-				  js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.1&appId=266578183986233&autoLogAppEvents=1';
-				  fjs.parentNode.insertBefore(js, fjs);
-				}(document, 'script', 'facebook-jssdk'));</script>
-				<div class="fb-page" data-href="https://www.facebook.com/UETVNUChatBot" data-width="500" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/UETVNUChatBot" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/UETVNUChatBot">UET ChatBot</a></blockquote></div>
-			</div>
+			
         </div>
     </section>
 
