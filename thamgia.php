@@ -150,7 +150,7 @@ function ketnoi($userid,$gioitinh) { //tìm người chát
 } 
 else {  // neu co nguoi trong hàng chờ
     addketnoi($userid, $partner);
-    echo .$userid. " ---------------- " .$partner.
+    echo $userid. " ---------------- " .$partner;
 	  sendchat($partner,"✅ Bạn đã được kết nối với một cá lạ(👤)");  
 	  sendchat($userid,"✅ Bạn đã được kết nối với một cá lạ(👤)"); 	
   }
