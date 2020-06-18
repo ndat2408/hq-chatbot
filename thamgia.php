@@ -2,7 +2,7 @@
 <?php
 $ID = $_POST['ID']; // lấy id từ chatfuel
 $gioitinh = $_POST['gt'];// lấy giới tính
-
+echo ID;
 require_once 'config.php'; //lấy thông tin từ config
 $conn = mysqli_connect($DBHOST, $DBUSER, $DBPW, $DBNAME); // kết nối data
 ////// Hàm Gửi JSON //////////
@@ -93,7 +93,7 @@ function ketnoi($userid,$gioitinh) { //tìm người chát
   // }
   //echo $result;
   $row = mysqli_fetch_assoc($result);
-  echo $row;
+  echo row;
   $partner = $row['ID'];
   // xử lý kiểm tra
   if ($partner == 0) { // nếu người không có ai trong hàng chờ
@@ -190,7 +190,7 @@ function trangthai($userid) {
 
   $result = mysqli_query($conn, "SELECT `trangthai` from `users` WHERE `ID` = $userid");
   $row = mysqli_fetch_assoc($result);
-
+  echo row;
   return intval($row['trangthai']) !== 0;
 }
 
