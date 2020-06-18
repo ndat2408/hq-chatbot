@@ -1,9 +1,10 @@
-
 <?php
-$ID = $_POST['ID']; // lấy id từ chatfuel
-$gioitinh = $_POST['gt'];// lấy giới tính
 require_once 'config.php'; //lấy thông tin từ config
 $conn = mysqli_connect($DBHOST, $DBUSER, $DBPW, $DBNAME); // kết nối data
+$ID = $_POST['ID']; // lấy id từ chatfuel
+$gioitinh = $_POST['gt'];// lấy giới tính
+
+
 ////// Hàm Gửi JSON //////////
 
 function request($userid,$jsondata) { 
@@ -79,18 +80,9 @@ function addketnoi($user1, $user2) {
 
 function ketnoi($userid,$gioitinh) { //tìm người chát 
   global $conn;
-  
-  //tìm đối tượng theo giới tính 
 
-  // if($gioitinh == "female"){// nếu giới tính là nữ thì kiếm người mang giới tính nam 
-  // $result = mysqli_query($conn, "SELECT `ID` FROM `users` WHERE `ID` != $userid AND `hangcho` = 1 AND `gioitinh` = 1 AND `ID` NOT IN (SELECT `idBlocked` FROM `block` WHERE `idBlock` = $userid) LIMIT 1");
-  // //echo "result : " . $result."<br>";
-  // }else if($gioitinh == "male"){// giới tính là nam thì tìm kiếm người là nữ
-  // $result = mysqli_query($conn, "SELECT `ID` FROM `users` WHERE `ID` != $userid AND `hangcho` = 1 AND `gioitinh` = 2 AND `ID` NOT IN (SELECT `idBlocked` FROM `block` WHERE `idBlock` = $userid) LIMIT 1");
-  // }else{ // không xác thì tìm kiếm người không xác định
   $result = mysqli_query($conn, "SELECT `ID` FROM `users` WHERE `ID` != $userid AND `hangcho` = 1 AND `gioitinh` = 0 AND `ID` NOT IN (SELECT `idBlocked` FROM `block` WHERE `idBlock` = $userid) LIMIT 1");
-  // }
-  //echo $result;
+
   $row = mysqli_fetch_assoc($result);
   $partner = $row['ID'];
   // xử lý kiểm tra
