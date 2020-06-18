@@ -2,10 +2,8 @@
 <?php
 $ID = $_POST['ID']; // lấy id từ chatfuel
 $gioitinh = $_POST['gt'];// lấy giới tính
-echo $ID;
 require_once 'config.php'; //lấy thông tin từ config
 $conn = mysqli_connect($DBHOST, $DBUSER, $DBPW, $DBNAME); // kết nối data
-echo $conn;
 ////// Hàm Gửi JSON //////////
 
 function request($userid,$jsondata) { 
@@ -94,7 +92,6 @@ function ketnoi($userid,$gioitinh) { //tìm người chát
   // }
   //echo $result;
   $row = mysqli_fetch_assoc($result);
-  echo $row;
   $partner = $row['ID'];
   // xử lý kiểm tra
   if ($partner == 0) { // nếu người không có ai trong hàng chờ
@@ -161,17 +158,8 @@ function ketnoi($userid,$gioitinh) { //tìm người chát
 }
 } else {  // neu co nguoi trong hàng chờ
     addketnoi($userid, $partner);
-	if($gioitinh == "male"){
-	sendchat($userid,"✅ Bạn đã được kết nối với một cá nữ (👩)");  
-	sendchat($partner,"✅ Bạn đã được kết nối với một cá nam (👱)");  
-	}else if($gioitinh == "female"){
-	sendchat($partner,"✅ Bạn đã được kết nối với một cá nữ (👩)");  
-	sendchat($userid,"✅ Bạn đã được kết nối với một cá nam (👱)"); 	
-	}else{
-	sendchat($partner,"✅ Bạn đã được kết nối với một cá lạ(👤)");  
-	sendchat($userid,"✅ Bạn đã được kết nối với một cá lạ(👤)"); 	
-	}
-  
+	  sendchat($partner,"✅ Bạn đã được kết nối với một cá lạ(👤)");  
+	  sendchat($userid,"✅ Bạn đã được kết nối với một cá lạ(👤)"); 	
   }
 }
 
@@ -191,7 +179,6 @@ function trangthai($userid) {
 
   $result = mysqli_query($conn, "SELECT `trangthai` from `users` WHERE `ID` = $userid");
   $row = mysqli_fetch_assoc($result);
-  echo $row;
   return intval($row['trangthai']) !== 0;
 }
 
