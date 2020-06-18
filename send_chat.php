@@ -84,7 +84,7 @@ function requestText($userid,$jsondata) { // hàm gửi chát :)))
   global $TOKEN;
   global $BOT_ID;
   global $BLOCK_NAME;
-  $url = "https://api.chatfuel.com/bots/$BOT_ID/users/$userid/send?chatfuel_token=$TOKEN&chatfuel_block_name=$BLOCK_NAME";
+  $url = "https://api.smax.bot/bots/$BOT_ID/users/$userid/send?bot_token=$TOKEN&block_name=$BLOCK_NAME";
   $ch = curl_init($url);
   curl_setopt($ch, CURLOPT_POST, 1);
   curl_setopt($ch, CURLOPT_POSTFIELDS, html_entity_decode($jsondata));
@@ -108,7 +108,7 @@ function requestImage($userid,$jsondata) { // hàm gửi chát :)))
   global $TOKEN;
   global $BOT_ID;
   global $BLOCK_IMAGE;
-  $url = "https://api.chatfuel.com/bots/$BOT_ID/users/$userid/send?chatfuel_token=$TOKEN&chatfuel_block_name=$BLOCK_IMAGE";
+  $url = "https://api.smax.bot/bots/$BOT_ID/users/$userid/send?bot_token=$TOKEN&block_name=$BLOCK_IMAGE";
   $ch = curl_init($url);
   curl_setopt($ch, CURLOPT_POST, 1);
   curl_setopt($ch, CURLOPT_POSTFIELDS, $jsondata);
@@ -130,7 +130,7 @@ function requestVoid($userid,$jsondata) { // hàm gửi chát :)))
   global $TOKEN;
   global $BOT_ID;
   global $BLOCK_VOID;
-  $url = "https://api.chatfuel.com/bots/$BOT_ID/users/$userid/send?chatfuel_token=$TOKEN&chatfuel_block_name=$BLOCK_VOID";
+  $url = "https://api.smax.bot/bots/$BOT_ID/users/$userid/send?bot_token=$TOKEN&block_name=$BLOCK_VOID";
   $ch = curl_init($url);
   curl_setopt($ch, CURLOPT_POST, 1);
   curl_setopt($ch, CURLOPT_POSTFIELDS, $jsondata);
@@ -152,7 +152,7 @@ function requestVideo($userid,$jsondata) { // hàm gửi chát :)))
   global $TOKEN;
   global $BOT_ID;
   global $BLOCK_VIDEO;
-  $url = "https://api.chatfuel.com/bots/$BOT_ID/users/$userid/send?chatfuel_token=$TOKEN&chatfuel_block_name=$BLOCK_VIDEO";
+  $url = "https://api.smax.bot/bots/$BOT_ID/users/$userid/send?bot_token=$TOKEN&block_name=$BLOCK_VIDEO";
   $ch = curl_init($url);
   curl_setopt($ch, CURLOPT_POST, 1);
   curl_setopt($ch, CURLOPT_POSTFIELDS, $jsondata);
@@ -174,7 +174,8 @@ function requestFile($userid,$jsondata) { // hàm gửi chát :)))
   global $TOKEN;
   global $BOT_ID;
   global $BLOCK_FILE;
-  $url = "https://api.chatfuel.com/bots/$BOT_ID/users/$userid/send?chatfuel_token=$TOKEN&chatfuel_block_name=$BLOCK_FILE";
+  // $url = "https://api.chatfuel.com/bots/$BOT_ID/users/$userid/send?chatfuel_token=$TOKEN&chatfuel_block_name=$BLOCK_FILE";
+  $url = "https://api.smax.bot/bots/$BOT_ID/users/$userid/send?bot_token=$TOKEN&block_name=$BLOCK_FILE"
   $ch = curl_init($url);
   curl_setopt($ch, CURLOPT_POST, 1);
   curl_setopt($ch, CURLOPT_POSTFIELDS, $jsondata);
