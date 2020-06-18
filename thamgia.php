@@ -11,7 +11,6 @@ function request($userid,$jsondata) {
   global $TOKEN;
   global $BOT_ID;
   global $BLOCK_NAME;
-  // $url = "https://api.chatfuel.com/bots/$BOT_ID/users/$userid/send?chatfuel_token=$TOKEN&chatfuel_block_name=$BLOCK_NAME";
   $url = "https://api.smax.bot/bots/$BOT_ID/users/$userid/send?bot_token=$TOKEN&block_name=$BLOCK_NAME";
   $ch = curl_init($url);
   curl_setopt($ch, CURLOPT_POST, 1);
