@@ -87,69 +87,70 @@ function ketnoi($userid,$gioitinh) { //tìm người chát
   $partner = $row['ID'];
   // xử lý kiểm tra
   if ($partner == 0) { // nếu người không có ai trong hàng chờ
-  mysqli_query($conn, "UPDATE `users` SET `hangcho` = 1 WHERE `ID` = $userid"); 
+    mysqli_query($conn, "UPDATE `users` SET `hangcho` = 1 WHERE `ID` = $userid"); 
     if($gioitinh == 'male'){
      echo'{
-     "messages": [
-    {
-      "attachment":{
-        "type":"template",
-        "payload":{
-          "template_type":"generic",
-          "elements":[
-            {
-              "title":"Đang thả câu...",
-              "subtitle":"Đợi xíu BOT đang tìm một cá nữ cho bạn (👩)"
-            }
-          ]
+      "messages": [
+      {
+        "attachment":{
+          "type":"template",
+          "payload":{
+            "template_type":"generic",
+            "elements":[
+              {
+                "title":"Đang thả câu...",
+                "subtitle":"Đợi xíu BOT đang tìm một cá nữ cho bạn (👩)"
+              }
+            ]
+          }
         }
       }
-    }
-  ]
-} ';
+    ]
+  } ';
 	   
-}else if($gioitinh == 'female'){
- echo'{
- "messages": [
-    {
-      "attachment":{
-        "type":"template",
-        "payload":{
-          "template_type":"generic",
-          "elements":[
-            {
-              "title":"Đang thả câu...",
-              "subtitle":"Đợi xíu BOT đang tìm một cá nam cho bạn (👱)"
+    }else if($gioitinh == 'female'){
+    echo'{
+    "messages": [
+        {
+          "attachment":{
+            "type":"template",
+            "payload":{
+              "template_type":"generic",
+              "elements":[
+                {
+                  "title":"Đang thả câu...",
+                  "subtitle":"Đợi xíu BOT đang tìm một cá nam cho bạn (👱)"
+                }
+              ]
             }
-          ]
+          }
         }
-      }
-    }
-  ]
-}  ';
-
-}else{
-  echo'{
- "messages": [
-    {
-      "attachment":{
-        "type":"template",
-        "payload":{
-          "template_type":"generic",
-          "elements":[
-            {
-              "title":"Đang thả câu...",
-              "subtitle":"Đợi xíu BOT đang tìm một cá ẩn giới tính giống bạn (👤)"
+      ]
+    }  ';
+    }else{
+      echo'{
+      "messages": [
+          {
+            "attachment":{
+              "type":"template",
+              "payload":{
+                "template_type":"generic",
+                "elements":[
+                  {
+                    "title":"Đang thả câu...",
+                    "subtitle":"Đợi xíu BOT đang tìm một cá ẩn giới tính giống bạn (👤)"
+                  }
+                ]
+              }
             }
-          ]
-        }
-      }
+          }
+        ]
+      }';	
     }
-  ]
-}';	
-}
-} else {  // neu co nguoi trong hàng chờ
+} 
+else {  // neu co nguoi trong hàng chờ
     addketnoi($userid, $partner);
+    echo .$userid. " ---------------- " .$partner.
 	  sendchat($partner,"✅ Bạn đã được kết nối với một cá lạ(👤)");  
 	  sendchat($userid,"✅ Bạn đã được kết nối với một cá lạ(👤)"); 	
   }
@@ -176,48 +177,51 @@ function trangthai($userid) {
 
 //// Xử lý //////
 if (!trangthai($ID)){// nếu chưa chát
-if (!hangcho($ID)) { // nếu chưa trong hàng chờ
-ketnoi($ID,$gioitinh);
-}else{
-echo'{
- "messages": [
-    {
-      "attachment":{
-        "type":"template",
-        "payload":{
-          "template_type":"generic",
-          "elements":[
-            {
-              "title":"Đang thả câu...",
-              "subtitle":"Chưa có cá nào dính thính đâu. Bạn chờ chút nhé! "
+  if (!hangcho($ID)) { // nếu chưa trong hàng chờ
+    ketnoi($ID,$gioitinh);
+  }
+  else{
+    echo "Đã trong hàng chờ: " . $ID . "!"; 
+    echo'{
+    "messages": [
+        {
+          "attachment":{
+            "type":"template",
+            "payload":{
+              "template_type":"generic",
+              "elements":[
+                {
+                  "title":"Đang thả câu...",
+                  "subtitle":"Chưa có cá nào dính thính đâu. Bạn chờ chút nhé! "
+                }
+              ]
             }
-          ]
+          }
         }
-      }
+      ]
+    }';
     }
-  ]
-}';
 }
-}else{
+else {
 // khi đang chát ! giải quyết sau !!
-echo'{
- "messages": [
-    {
-      "attachment":{
-        "type":"template",
-        "payload":{
-          "template_type":"generic",
-          "elements":[
-            {
-              "title":"Cảnh báo",
-              "subtitle":"Bạn đang được kết nối với cá rồi ! Hãy gõ \'End\' để thoát"
-            }
-          ]
+  echo'{
+  "messages": [
+      {
+        "attachment":{
+          "type":"template",
+          "payload":{
+            "template_type":"generic",
+            "elements":[
+              {
+                "title":"Cảnh báo",
+                "subtitle":"Bạn đang được kết nối với cá rồi ! Hãy gõ \'End\' để thoát"
+              }
+            ]
+          }
         }
       }
-    }
-  ]
-}';
+    ]
+  }';
 }
 mysqli_close($conn);
 ?>
