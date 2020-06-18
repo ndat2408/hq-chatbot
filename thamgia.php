@@ -99,7 +99,7 @@ function test() {
       }
     }
   ]
-} '
+} ';
 }
 
 /////Tìm kiếm kết nối /////
