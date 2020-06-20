@@ -21,7 +21,5 @@ if ( !isUserExist($ID) ) { // nếu chưa tồn tại thì update lên sever
     $sql = "INSERT INTO `users` (`ID`, `trangthai`, `hangcho` ,`gioitinh`) VALUES (".$ID.", 0, 0 , $gioitinh)";
    $info = mysqli_query($conn,$sql );
   }
-  $sql = "UPDATE `users` SET `trangthai` = 0, `ketnoi` = NULL, `hangcho` = 0 WHERE `ID` = $ID";
-  $info = mysqli_query($conn,$sql );
 mysqli_close($conn);
 ?>
