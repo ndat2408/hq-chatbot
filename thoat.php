@@ -74,8 +74,8 @@ function outchat($userid) {
   $partner = getRelationship($userid);
   mysqli_query($conn, "UPDATE `users` SET `trangthai` = 0, `ketnoi` = NULL, `hangcho` = 0 WHERE `ID` = $userid");
   mysqli_query($conn, "UPDATE `users` SET `trangthai` = 0, `ketnoi` = NULL, `hangcho` = 0 WHERE `ID` = $partner");
-  sendchat($userid,"💔 Bạn đã ngừng câu ! Để tiếp tục thả câu hãy gõ 'Start'");
-  endchat($partner,"💔 Cá đã thoát ! Để tiếp tục thả câu hãy gõ 'Start'");
+  sendchat($userid,"💔 Bạn đã thoát ! Để tiếp tục hãy gõ 'Start'");
+  endchat($partner,"💔 Người lạ đã thoát ! Để tiếp tục hãy gõ 'Start'");
 }
 
 
@@ -111,7 +111,7 @@ echo'{
           "elements":[
             {
               "title":"Cảnh báo",
-              "subtitle":"Bạn chưa thả câu ! Hãy gõ \'Start\' để bắt đầu rắc thính nhé"
+              "subtitle":"Bạn chưa bắt đầu ! Hãy gõ \'Start\' để bắt đầu rắc thính nhé"
             }
           ]
         }
@@ -129,8 +129,8 @@ echo'{
           "template_type":"generic",
           "elements":[
             {
-              "title":"Ngừng câu",
-              "subtitle":"Bạn đã ngừng câu ! Hãy gõ \'Start\' để quay lại rắc thính"
+              "title":"Cảnh báo",
+              "subtitle":"Bạn đã thoát ! Hãy gõ \'Start\' để quay lại rắc thính"
             }
           ]
         }

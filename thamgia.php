@@ -100,8 +100,8 @@ function ketnoi($userid,$gioitinh) { //tìm người chát
             "template_type":"generic",
             "elements":[
               {
-                "title":"Đang thả câu...",
-                "subtitle":"Đợi xíu BOT đang tìm một cá nữ cho bạn (👩)"
+                "title":"Đang tìm kiếm...",
+                "subtitle":"Đợi mình xíu nha, mình đang tìm một bạn nữ cho bạn 😜"
               }
             ]
           }
@@ -120,8 +120,8 @@ function ketnoi($userid,$gioitinh) { //tìm người chát
               "template_type":"generic",
               "elements":[
                 {
-                  "title":"Đang thả câu...",
-                  "subtitle":"Đợi xíu BOT đang tìm một cá nam cho bạn (👱)"
+                  "title":"Đang tìm kiếm...",
+                  "subtitle":"Đợi mình xíu nha, mình đang tìm một bạn nam cho bạn 😜"
                 }
               ]
             }
@@ -139,8 +139,8 @@ function ketnoi($userid,$gioitinh) { //tìm người chát
                 "template_type":"generic",
                 "elements":[
                   {
-                    "title":"Đang thả câu...",
-                    "subtitle":"Đợi xíu BOT đang tìm một cá ẩn giới tính giống bạn (👤)"
+                    "title":"Đang tìm kiếm...",
+                    "subtitle":"Đợi mình xíu nha 😜"
                   }
                 ]
               }
@@ -153,8 +153,8 @@ function ketnoi($userid,$gioitinh) { //tìm người chát
 else {  // neu co nguoi trong hàng chờ
     addketnoi($userid, $partner);
     echo $userid. " ---------------- " .$partner;
-	  sendchat($partner,"✅ Bạn đã được kết nối với một cá lạ(👤)");  
-	  sendchat($userid,"✅ Bạn đã được kết nối với một cá lạ(👤)"); 	
+	  sendchat($partner,"✅ Bạn đã được kết nối với một người lạ");  
+	  sendchat($userid,"✅ Bạn đã được kết nối với một người lạ"); 	
   }
 }
 
@@ -192,8 +192,8 @@ if (!trangthai($ID)){// nếu chưa chát
               "template_type":"generic",
               "elements":[
                 {
-                  "title":"Đang thả câu...",
-                  "subtitle":"Chưa có cá nào dính thính đâu. Bạn chờ chút nhé! "
+                  "title":"Đang tìm kiếm...",
+                  "subtitle":"Có vẻ như ít người online quá :< Bạn chờ chút nhé! "
                 }
               ]
             }
@@ -215,7 +215,7 @@ else {
             "elements":[
               {
                 "title":"Cảnh báo",
-                "subtitle":"Bạn đang được kết nối với cá rồi ! Hãy gõ \'End\' để thoát"
+                "subtitle":"Bạn đang được kết nối rồi ! Hãy gõ \'thoat\' để thoát"
               }
             ]
           }

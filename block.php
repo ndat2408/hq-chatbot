@@ -76,8 +76,8 @@ function outchat($userid) {
   mysqli_query($conn, "UPDATE `users` SET `trangthai` = 0, `ketnoi` = NULL, `hangcho` = 0 WHERE `ID` = $partner");
   mysqli_query($conn, "INSERT INTO `block` (idBlock, idBlocked) VALUES ($userid, $partner) ");
   mysqli_query($conn, "INSERT INTO `block` (idBlock, idBlocked) VALUES ($partner, $userid) ");
-  sendchat($userid,"💔 Cá đã bị block ! Để tiếp tục thả câu hãy gõ 'Start'");
-  endchat($partner,"💔 Cá đã block bạn ! Để tiếp tục thả câu hãy gõ 'Start'");
+  sendchat($userid,"💔 Người lạ đã bị block ! Để tiếp tục hãy gõ 'Start'");
+  endchat($partner,"💔 Người lạ đã block bạn ! Để tiếp tục hãy gõ 'Start'");
 }
 
 
@@ -113,7 +113,7 @@ echo'{
           "elements":[
             {
               "title":"Cảnh báo",
-              "subtitle":"Bạn chưa thả câu ! Hãy gõ \'Start\' để bắt đầu rắc thính nhé"
+              "subtitle":"Bạn chưa bắt đầu ! Hãy gõ \'Start\' để bắt đầu rắc thính nhé"
             }
           ]
         }
