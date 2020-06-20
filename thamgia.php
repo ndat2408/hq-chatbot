@@ -76,30 +76,7 @@ function addketnoi($user1, $user2) {
   mysqli_query($conn, "UPDATE `users` SET `trangthai` = 1, `ketnoi` = $user1, `hangcho` = 0 WHERE `ID` = $user2");
 }
 
-function test() {
-  global $conn;
 
-  mysqli_query($conn, "UPDATE `users` SET `trangthai` = 1, `ketnoi` = 1728394787284364, `hangcho` = 0 WHERE `ID` = 3102298293141736");
-  mysqli_query($conn, "UPDATE `users` SET `trangthai` = 1, `ketnoi` = 3102298293141736, `hangcho` = 0 WHERE `ID` = 1728394787284364");
-  echo'{
-    "messages": [
-    {
-      "attachment":{
-        "type":"template",
-        "payload":{
-          "template_type":"generic",
-          "elements":[
-            {
-              "title":"TEST",
-              "subtitle":"Kết nối thành công"
-            }
-          ]
-        }
-      }
-    }
-  ]
-} ';
-}
 
 /////Tìm kiếm kết nối /////
 
@@ -206,7 +183,6 @@ if (!trangthai($ID)){// nếu chưa chát
     ketnoi($ID,$gioitinh);
   }
   else{
-    test(); 
     echo'{
     "messages": [
         {
