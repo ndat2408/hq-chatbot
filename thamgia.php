@@ -101,7 +101,7 @@ function ketnoi($userid,$gioitinh) { //tìm người chát
             "elements":[
               {
                 "title":"Đang tìm kiếm...",
-                "subtitle":"Đợi mình xíu nha, mình đang tìm một bạn nữ cho bạn 😜"
+                "subtitle":"Đợi mình xíu nha, mình đang tìm một người để bạn tâm sự"
               }
             ]
           }
@@ -121,7 +121,7 @@ function ketnoi($userid,$gioitinh) { //tìm người chát
               "elements":[
                 {
                   "title":"Đang tìm kiếm...",
-                  "subtitle":"Đợi mình xíu nha, mình đang tìm một bạn nam cho bạn 😜"
+                  "subtitle":"Đợi mình xíu nha, mình đang tìm một người để bạn tâm sự"
                 }
               ]
             }
@@ -140,7 +140,7 @@ function ketnoi($userid,$gioitinh) { //tìm người chát
                 "elements":[
                   {
                     "title":"Đang tìm kiếm...",
-                    "subtitle":"Đợi mình xíu nha 😜"
+                    "subtitle":"Đợi mình xíu nha, mình đang tìm một người để bạn tâm sự"
                   }
                 ]
               }
